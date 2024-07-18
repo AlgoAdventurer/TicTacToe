@@ -19,3 +19,7 @@
     width: 225px;
     margin: auto;
 }
+
+#statusText {
+    padding-top: 10px;
+}

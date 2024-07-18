@@ -102,13 +102,13 @@ function updateCell(cell, indexX, indexY) {
 function changePlayer() {
     if (against == "human_human") {
         currentPlayer = (currentPlayer == Player1) ? Player2 : Player1;
-        statusText.textContent = `${currentPlayer} ist dran`;
+        statusText.textContent = `${currentPlayer} is playing`;
     } else if (against == "human_ai") {
         currentPlayer = (currentPlayer == human) ? ai : human;
-        statusText.textContent = `${currentPlayer} ist dran`;
+        statusText.textContent = `${currentPlayer} is playing`;
     } else if (against == "ai_ai") {
         currentPlayer = (currentPlayer == Player1) ? Player2 : Player1;
-        statusText.textContent = `${currentPlayer} ist dran`;
+        statusText.textContent = `${currentPlayer} is playing`;
     }
 }
 
@@ -147,10 +147,10 @@ function checkWinner() {
     }
 
     if (winner == null && openSpots == 0) {
-        statusText.textContent = `Unentschieden!`;
+        statusText.textContent = `Draw!`;
         running = false;
     } else if (winner != null) {
-        statusText.textContent = `${winner} hat gewonnen!`;
+        statusText.textContent = `${winner} has won!`;
         running = false;
     } else {
         changePlayer()
@@ -164,7 +164,7 @@ function restartGame() {
         ["", "", ""],
         ["", "", ""]
     ];
-    statusText.textContent = `${currentPlayer} ist dran`;
+    statusText.textContent = `${currentPlayer} is playing`;
     cells.forEach(cell => cell.textContent = "");
     running = true;
     settings();
