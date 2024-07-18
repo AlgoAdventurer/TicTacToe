@@ -1,0 +1,45 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tictactoe.css">
+  <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+  <div id="gameContainer">
+    <h1>Tic-Tac-Toe</h1>
+    <div class="board" id="board">
+      <div id="zero" class="cell" cellIndexX="0" cellIndexY="0"></div>
+      <div id="ten" class="cell" cellIndexX="1" cellIndexY="0"></div>
+      <div id="twenty" class="cell" cellIndexX="2" cellIndexY="0"></div>
+      <div id="one" class="cell" cellIndexX="0" cellIndexY="1"></div>
+      <div id="eleven" class="cell" cellIndexX="1" cellIndexY="1"></div>
+      <div id="twentyone" class="cell" cellIndexX="2" cellIndexY="1"></div>
+      <div id="two" class="cell" cellIndexX="0" cellIndexY="2"></div>
+      <div id="twelf" class="cell" cellIndexX="1" cellIndexY="2"></div>
+      <div id="twentytwo" class="cell" cellIndexX="2" cellIndexY="2"></div>
+    </div>
+
+    <div id="statusText"></div>
+    <button id="restartButton">Restart</button><br>
+
+    <div id="choose">
+      <input type="radio" id="human_human" name="against" value="Mensch gegen Mensch" checked>
+      <label for="human_human">Mensch gegen Mensch</label><br>
+      <input type="radio" id="human_ai" name="against" value="Mensch gegen AI">
+      <label for="human_ai">Mensch gegen AI</label><br>
+      <input type="radio" id="ai_ai" name="against" value="AI gegen AI">
+      <label for="ai_ai">AI gegen AI</label><br>
+    </div><br>
+
+    <input type="radio" id="x" name="xo" value="X" checked>
+    <label for="x">X</label><br>
+    <input type="radio" id="o" name="xo" value="O">
+    <label for="o">O</label><br>
+
+  </div>
+
+  <script src="minimax.js"></script>
+  <script src="game.js"></script>
+</body>
